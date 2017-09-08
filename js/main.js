@@ -22,7 +22,7 @@ getAPI = function getAPI() {
 function getAPIByName(beer,yeast) {
 	var apiURL="";
 	if(beer == "" & yeast ==""){
-		window.alert("Field is blank");
+		window.alert("Please insert Beer's name or yeast.");
         return false;
 	}
 	if(beer == "" & yeast !="")
