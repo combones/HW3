@@ -9,8 +9,8 @@ getAPI = function getAPI() {
         for (var i = 0; i < response.length; i++) {
             result += "<b>Name : </b>" 
 			+ response[i].name + "<br> <b>Tagline : </b>" 
-			+ response[i].tagline + "<br> <b>PH : </b>" 
-			+ response[i].ph + "<br> <b>Yeast : </b>" 
+			+ response[i].tagline + "<br> <b>Food pairing : </b>" 
+			+ response[i].food_pairing + "<br> <b>Yeast : </b>" 
 			+ response[i].ingredients.yeast + "<br> <b>First Brewed : </b>" 
 			+ response[i].first_brewed + "<br> <b>Description : </b>" 
 			+ response[i].description + "<br><hr>";
@@ -19,16 +19,16 @@ getAPI = function getAPI() {
     });
 };
 
-function getAPIByName(beer,yeast) {
+function getAPIByName(beer,food) {
 	var apiURL="";
-	if(beer == "" & yeast ==""){
+	if(beer == "" & food ==""){
 		window.alert("Please insert Beer's name or yeast.");
         return false;
 	}
-	if(beer == "" & yeast !="")
-		{ apiURL = 'https://api.punkapi.com/v2/beers/?yeast=' + yeast }
+	if(beer == "" & food !="")
+		{ apiURL = 'https://api.punkapi.com/v2/beers/?food=' + food }
 	else
-		{ apiURL = 'https://api.punkapi.com/v2/beers/?beer_name=' + beer + '&?yeast=' + yeast }
+		{ apiURL = 'https://api.punkapi.com/v2/beers/?beer_name=' + beer + '&?yeast=' + food }
 	
 	return fetch(apiURL).then(function (response) {
         return response.json();
@@ -40,8 +40,8 @@ function getAPIByName(beer,yeast) {
         for (var i = 0; i < response.length; i++) {
             result += "<b>Name : </b>" 
 			+ response[i].name + "<br> <b>Tagline : </b>" 
-			+ response[i].tagline + "<br> <b>PH : </b>" 
-			+ response[i].ph + "<br> <b>Yeast : </b>" 
+			+ response[i].tagline + "<br> <b>Food pairing : </b>" 
+			+ response[i].food_pairing + "<br> <b>Yeast : </b>" 
 			+ response[i].ingredients.yeast + "<br> <b>First Brewed : </b>" 
 			+ response[i].first_brewed + "<br> <b>Description : </b>" 
 			+ response[i].description + "<br><hr>";
@@ -52,6 +52,5 @@ function getAPIByName(beer,yeast) {
 			document.getElementById('result').innerHTML = result;
     });
 };
-
 
 
