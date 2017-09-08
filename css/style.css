@@ -1,16 +1,13 @@
 #result {
-		border: 5px solid black; 
+		border: 2px solid black; 
+		text-align: left;
+		font: italic  16px/30px Georgia, serif;
 		}
 		button {
 		background-color : white;
-		border : 2px ;
+		border : 1px solid black;
 		}
 		body {
 		background-image: url("beer.jpg");
 		}
-		p{
-		margin: auto;
-		}
-		#result{
-		text-align: left;
-		}
+
