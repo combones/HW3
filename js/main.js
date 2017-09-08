@@ -7,13 +7,12 @@ getAPI = function getAPI() {
     }).then(function (response) {
         var result = "";
         for (var i = 0; i < response.length; i++) {
-            result += "<b>Name : </b>" 
-			+ response[i].name + "<br> <b>Tagline : </b>" 
-			+ response[i].tagline + "<br> <b>Food pairing : </b>" 
-			+ response[i].food_pairing + "<br> <b>Yeast : </b>" 
-			+ response[i].ingredients.yeast + "<br> <b>First Brewed : </b>" 
-			+ response[i].first_brewed + "<br> <b>Description : </b>" 
-			+ response[i].description + "<br><hr>";
+            result += "<b>Name : </b>" + response[i].name + 
+			"<br> <b>Tagline : </b>" + response[i].tagline + 
+			"<br> <b>Food pairing : </b>" + response[i].food_pairing + 
+			"<br> <b>Yeast : </b>" + response[i].ingredients.yeast + 
+			"<br> <b>First Brewed : </b>" + response[i].first_brewed +
+			"<br> <b>Description : </b>" + response[i].description + "<br><hr>";
         }
         document.getElementById('result').innerHTML = result;
     });
@@ -22,7 +21,7 @@ getAPI = function getAPI() {
 function getAPIByName(beer,food) {
 	var apiURL="";
 	if(beer == "" & food ==""){
-		window.alert("Please insert Beer's name or yeast.");
+		window.alert("Please insert Beer's name or food.");
         return false;
 	}
 	if(beer == "" & food !="")
@@ -38,13 +37,12 @@ function getAPIByName(beer,food) {
     }).then(function (response) {
         var result = "";
         for (var i = 0; i < response.length; i++) {
-            result += "<b>Name : </b>" 
-			+ response[i].name + "<br> <b>Tagline : </b>" 
-			+ response[i].tagline + "<br> <b>Food pairing : </b>" 
-			+ response[i].food_pairing + "<br> <b>Yeast : </b>" 
-			+ response[i].ingredients.yeast + "<br> <b>First Brewed : </b>" 
-			+ response[i].first_brewed + "<br> <b>Description : </b>" 
-			+ response[i].description + "<br><hr>";
+            result += "<b>Name : </b>" + response[i].name + 
+			"<br> <b>Tagline : </b>" + response[i].tagline + 
+			"<br> <b>Food pairing : </b>" + response[i].food_pairing + 
+			"<br> <b>Yeast : </b>" + response[i].ingredients.yeast + 
+			"<br> <b>First Brewed : </b>" + response[i].first_brewed +
+			"<br> <b>Description : </b>" + response[i].description + "<br><hr>";
         }
 		if(response == "")
 			{document.getElementById('result').innerHTML = "Sorry, We don't have this one.";}
