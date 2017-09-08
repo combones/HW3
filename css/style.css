@@ -1,0 +1,16 @@
+#result {
+		border: 5px solid black; 
+		}
+		button {
+		background-color : white;
+		border : 2px ;
+		}
+		body {
+		background-image: url("beer.jpg");
+		}
+		p{
+		margin: auto;
+		}
+		#result{
+		text-align: left;
+		}

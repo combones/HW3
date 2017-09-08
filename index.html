@@ -1,0 +1,23 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src='build/main.bundle.js'></script>
+	<script src='js/main.js'></script>
+</head>
+<body onload="getAPI()">
+	
+	<div align="left">
+	<h2>
+	Searching for Beers, Cheers!
+	</h2>
+	<input type="text" id="beer" placeholder="Beer name" />
+	<input type="text" id="yeast" placeholder="Type of Yeast" />
+	<button onclick="getAPIByName(getElementById('beer').value,getElementById('yeast').value)">Search</button>
+	<button onclick=location=URL>Refresh</button>
+	</div>
+	
+	</br></br></br>
+	<div id="result" align="center">
+	</div>
+</body>
+</html>
